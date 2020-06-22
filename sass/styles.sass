@@ -5,6 +5,11 @@
   @media (min-width: $_min_width)
     @content
 
+@mixin title($_font_weight: 400, $_font_size: 1.6rem)
+  font-family: Oswald
+  font-weight: $_font_weight
+  font-size: $_font_size
+
 // theme colors
 .brand-major-color
   color: $brand-major
@@ -65,24 +70,80 @@ h2, h3
 
 .navbar
   background-color: $brand-minor
+  padding: 0
 .navbar-row
-  height: 10rem
-  align-items: center
-.navbar-brand
-  align-self: center
-  text-decoration: none
-  font-family: 'Oswald', sans-serif
-  font-size: 2.8rem
-  &__wrap
+  height: 11rem
+  align-content: center
+  .navbar-left
     display: flex
-    flex-wrap: wrap
-    margin: 0px
-    &__go
-      color: $brand-major
-    &__vegan
-      color: $white
-    &__paspartoo
-      color: $white
-      font-size: 0.9rem
-      flex-basis: 100%
-
+    padding: 0
+    justify-content: start
+    .navbar-brand
+      text-decoration: none
+      @include title(400, 2.8rem)
+      margin: 0
+      padding: 0
+      &__wrap
+        display: flex
+        flex-wrap: wrap
+        margin-left: 3rem
+        width: 11rem
+        &__go
+          color: $brand-major
+        &__vegan
+          color: $white
+        &__paspartoo
+          color: $white
+          font-size: 0.9rem
+          flex-basis: 100%
+    .top-navigation-menu
+      list-style: none
+      display: flex
+      align-items: center
+      @include title(500, 2.1rem)
+      letter-spacing: 0.05em
+      margin: 0
+      li
+        padding-left: 3rem
+        .nav-link
+          color: $white
+          text-decoration: none
+          text-transform: uppercase
+      .dropdown 
+        position: relative
+      .dropdown-menu // natural foods dropdown
+        transition: 300ms ease
+        position: absolute
+        left: 4rem
+        top: 5rem
+        border-radius: 0
+        padding: 2rem 0.75rem 
+        @include media_min($_min_width: 0) // mobile: white on brand minor
+          color: $white
+          background-color: $brand-minor
+        @include media_min($_min_width: $notebook) // notebook+: brand minor on brand-light
+          background-color: $brand-light
+        .dropdown-item // inside dropdown
+          width: 100%
+          line-height: 200%
+          @include title()
+          @include media_min($_min_width: 0)// mobile: white on brand minor
+            color: $white
+            background-color: $brand-minor
+          @include media_min($_min_width: $notebook)
+            color: $brand-minor
+            background-color: $brand-light // notebook+: brand minor on brand-light
+            &:active  // notebook::active+: brand orange on brand-light
+              color: $brand-orange
+  .navbar-right
+    display: flex
+    align-self: center
+    justify-content: end
+    padding: 0
+    .form_modal_button
+      background-color: $brand-orange
+      @include title(500, 2.1rem)
+      letter-spacing: -0.02em
+      text-transform: uppercase
+      padding: 1.8rem 5rem
+      border-radius: 5px

@@ -19,7 +19,11 @@
     <div class="container">
         <nav class="navbar navbar-expand-lg sticky-top">
             <div class="row navbar-row">
-                <div class="navbar-left col-8">
+                <div class="navbar-left col-auto">
+                    <button class="navbar-toggler collapsed d-none" data-target="#nav_topbar" data-toggle="collapse"
+                        aria-controls="nav_topbar" aria-expanded="false" aria-label="Hamburger Menu">
+                        <!--<span class="navbar-toggler-icon"></span>-->
+                    </button>
                     <a class="navbar-brand" href="#">
                         <div class="navbar-brand__wrap">
                             <span class="navbar-brand__wrap__go">GO</span>
@@ -27,12 +31,35 @@
                             <span class="navbar-brand__wrap__paspartoo">Paspartoo Education Project</span>
                         </div>
                     </a><!-- /.navbar-brand -->
-                    
+                    <ul class="top-navigation-menu">
+                        <li class="top-navigation-menu__element dropdown">
+                            <a href="#" class="dropdown-toggle nav-link id=" navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Natural food &lt;</a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Rainbow "Raw-Maine" Taco Boats</a>
+                                <a class="dropdown-item" href="#">Vegan Spinach and Mushroom Pasta</a>
+                                <a class="dropdown-item" href="#">Tokyo Splash Plate</a>
+                                <a class="dropdown-item" href="#">Thai Green Curry</a>
+                                <a class="dropdown-item" href="#">Vegan Avocado Plate</a>
+                                <a class="dropdown-item" href="#">Spinach Thai Green Curry</a>
+                            </div>
+                        </li>
+                        <li class="top-navigation-menu__element">
+                            <a href="#" class="nav-link">Lifestyle</a>
+                        </li>
+                        <li class="top-navigation-menu__element">
+                            <a href="#" class="nav-link">Contacts</a>
+                        </li>
+                    </ul><!-- /.top-navigation-men -->
                 </div> <!-- /.navbar-left -->
-                <div class="navbar-right col-4">
-
+                <div class="col-auto">
+                    &nbsp;
                 </div>
-                <!-- /.navbar-right -->
+                <div class="navbar-right">
+                    <div class="row justify-content-end align-items-center">
+                        <div class="form_modal_button">Ask a question</div>
+                    </div>
+                </div><!-- /.row justify-content-end -->
             </div>
             <!--./row-->
         </nav> <!-- /<nav class="navbar navbar-expand-lg sticky-top">-->
