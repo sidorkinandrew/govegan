@@ -409,4 +409,24 @@ hr {
   margin: 1em 0;
   padding: 0;
 }
+
+#front_carousel .carousel-inner .carousel-item .carousel-caption {
+  height: 95%;
+  font-family: Oswald;
+  font-weight: 500;
+  font-size: 6.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#front_carousel .carousel-control-prev .carousel-control-prev-icon {
+  align-self: end;
+  margin-bottom: 4.3rem;
+}
+
+#front_carousel .carousel-control-next .carousel-control-next-icon {
+  align-self: end;
+  margin-bottom: 4.3rem;
+}
 /*# sourceMappingURL=styles.min.css.map */
