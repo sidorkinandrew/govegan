@@ -117,7 +117,7 @@ h2, h3 {
 
 @media (min-width: 1360px) {
   .vegan-container {
-    max-width: 100%;
+    max-width: 1300px;
   }
 }
 
