@@ -1,5 +1,7 @@
 .container {
   margin: auto;
+  padding-right: 0;
+  padding-left: 0;
 }
 
 .row {
@@ -37,34 +39,36 @@ h2, h3 {
   font-family: 'Oswald', sans-serif;
 }
 
-.vegan-container {
+.container {
   margin: auto;
+  max-width: 100%;
 }
 
 @media (min-width: 320px) {
   .vegan-container {
+    margin: auto;
     max-width: 100vw;
     padding: 0px;
   }
-  .vegan-container h1 {
+  h1 {
     font-size: 4.2rem;
   }
-  .vegan-container h2 {
+  h2 {
     font-size: 3.6rem;
   }
-  .vegan-container h3 {
+  h3 {
     font-size: 2.4rem;
   }
-  .vegan-container h4 {
+  h4 {
     font-size: 2.1rem;
   }
-  .vegan-container h5 {
+  h5 {
     font-size: 1.6rem;
   }
-  .vegan-container h6 {
+  h6 {
     font-size: 1.6rem;
   }
-  .vegan-container p {
+  p {
     font-size: 1.6rem;
   }
 }
@@ -79,16 +83,16 @@ h2, h3 {
   .vegan-container {
     max-width: 750px;
   }
-  .vegan-container h1 {
+  h1 {
     font-size: 4.8rem;
   }
-  .vegan-container h3 {
+  h3 {
     font-size: 2.8rem;
   }
-  .vegan-container h4 {
+  h4 {
     font-size: 2.4rem;
   }
-  .vegan-container h6 {
+  h6 {
     font-size: 1.8rem;
   }
 }
@@ -97,7 +101,7 @@ h2, h3 {
   .vegan-container {
     max-width: 960px;
   }
-  .vegan-container h1 {
+  h1 {
     font-size: 6.4rem;
   }
 }
@@ -106,7 +110,7 @@ h2, h3 {
   .vegan-container {
     max-width: 1140px;
   }
-  .vegan-container h6 {
+  h6 {
     font-size: 2.1rem;
   }
 }
@@ -270,7 +274,6 @@ h2, h3 {
 
 .footer-bar .footer-main {
   padding-top: 7.4rem;
-  max-width: 1300px;
   margin: auto;
   padding-bottom: 5rem;
   border-bottom: 1px solid #ffffff;
